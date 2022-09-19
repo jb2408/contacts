@@ -1,0 +1,38 @@
+<div fxLayout="column" class="contacts-page-container">
+  <nav fxLayoutAlign="space-between center">
+    <h1 class="title">Contacts</h1>
+    <div fxHide fxShow.lt-md>
+      <input
+        type="search"
+        id="contact-search"
+        name="search"
+        placeholder="Search"
+        [(ngModel)]="searchContact"
+      />
+    </div>
+  </nav>
+  <div fxLayout="row" style="height: 100%">
+    <div class="sidebar" fxFlex="20" fxHide.lt-md>
+      <input
+        type="search"
+        id="contact-search"
+        name="search"
+        placeholder="Search"
+      />
+    </div>
+    <div
+      class="contacts-content"
+      fxFlex="80"
+      fxFlex.lt-md="100"
+      fxLayout="row wrap"
+      fxLayoutGap="12px grid"
+      *ngIf="allContacts"
+    >
+      <ng-container *ngFor="let contact of allContacts | filter: searchContact">
+        <div fxFlex="25" fxFlex.lt-lg="33" fxFlex.lt-md="50" fxFlex.lt-sm="100">
+          <app-contact-card [contactData]="contact"></app-contact-card>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import "../../styles.scss";
+
+.contacts-page-container {
+  height: 100%;
+  nav {
+    height: 50px;
+    width: 100%;
+    background-color: $background-blue;
+    @include pad(4);
+    .title {
+      font-weight: 300;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+  .sidebar {
+    background-color: $dark-grey;
+    height: auto;
+    @include pad(4);
+    position: relative;
+    input {
+      height: 30px;
+      width: 100%;
+    }
+  }
+  .contacts-content {
+    background-color: $light-grey;
+    @include pad(4);
+  }
+}

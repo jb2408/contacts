@@ -1,0 +1,16 @@
+<div
+  class="contact-card"
+  fxLayout="row"
+  fxLayoutGap="12px"
+  fxLayoutAlign="start center"
+>
+  <div class="blue-circle" fxLayoutAlign="center center">
+    <span>{{ getFirstLetters(contactData.name) }}</span>
+  </div>
+  <div class="contact-data" fxLayout="column">
+    <span class="name">{{ contactData.name }}</span>
+    <span class="username">{{ contactData.username }}</span>
+    <a href="mailto:{{ contactData.email }}">{{ contactData.email }}</a>
+    <a href="tel:{{ contactData.phone }}">{{ contactData.phone }}</a>
+  </div>
+</div>
